@@ -395,7 +395,7 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{3mm}
+\newcommand{\acvSectionTopSkip}{1mm}
 \newcommand{\acvSectionContentTopSkip}{2.5mm}
 
 
@@ -593,6 +593,23 @@
 }{%
   \end{center}
 }
+
+% Define an environment for cvpub
+\newenvironment{cvpubs}{
+  \begin{center}
+}{
+  \end{center}
+}
+% Define an entry of cv information
+% Usage: \cvpub{<description>}
+\newcommand*{\cvpub}[1]{
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{17.0cm} }
+    \descriptionstyle{#1} \\
+  \end{tabular*}
+}
+
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
@@ -665,7 +682,7 @@
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskill}[2]{%
-	\skilltypestyle{#1} & \skillsetstyle{#2} \\
+  \skilltypestyle{#1} & \skillsetstyle{#2} \\
 }
 
 % Define an environment for cvitems(for cventry)
@@ -679,6 +696,38 @@
   \end{itemize}
   \end{justify}
   \vspace{-4.0mm}
+}
+
+
+% Define an environment for cvlist(for cventry)
+\newenvironment{cvlist}{
+  \vspace{-4mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=0pt, itemsep=0pt, parsep=0pt, label={}]
+    \setlength{\parskip}{0pt}
+    %\renewcommand{\labelitemi}{\bullet}
+}{
+  \end{itemize}
+  \end{justify}
+  \vspace{-2mm}
+}
+
+
+% Define an environment for cvpres
+\newenvironment{cvpress}{
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{15.4cm} R{1.6cm}}
+}{
+    \end{tabular*}
+  \end{center}
+}
+% Define a line of cv information(honor, award or something else)
+% Usage: \cvpres{<title>}{<location>}{<date>}
+\newcommand*{\cvpres}[3]{
+  \honorpositionstyle{#1}, \honortitlestyle{#2} & \honordatestyle{#3}
+  \\
 }
 
 
