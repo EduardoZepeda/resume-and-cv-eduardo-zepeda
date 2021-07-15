@@ -26,13 +26,15 @@ $ git clone https://github.com/EduardoZepeda/resume-and-cv-eduardo-zepeda
 $ make
 ```
 
+This command will generate pdf and png files in the examples directory.
+
 ## Can I use this template?
 
 Please check the license and the limitations regarding the use of this template directly in the [Awesome CV repo](https://github.com/posquit0/Awesome-CV#contact)
 
 ## Credits
 
-[posquit0](https://github.com/posquit0/) The creator of the Awesome CV template.
+[**posquit0**](https://github.com/posquit0/) The creator of the Awesome CV template.
 
 [**LaTeX**](http://www.latex-project.org) is a fantastic typesetting program that a lot of people use these days, especially the math and computer science people in academia.
 
