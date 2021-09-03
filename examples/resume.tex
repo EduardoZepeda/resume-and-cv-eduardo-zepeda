@@ -41,8 +41,9 @@
 
 %%% Override a separator for social informations in header(default: ' | ')
 %\headersocialsep[\quad\textbar\quad]
-
-
+% \usepackage[english, spanish]{babel}
+\usepackage[spanish, english]{babel}
+\usepackage{iflang}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     3rd party packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -55,7 +56,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Essentials
 \name{Eduardo}{Zepeda}
-\position{Desarrollador web \quad\textbar\quad Entusiasta de GNU/Linux}%{\enskip\cdotp\enskip}Security Expert}
+\IfLanguageName{english}{
+  \position{Full stack developer \quad\textbar\quad GNU/Linux Enthusiast}%{\enskip\cdotp\enskip}Security Expert}
+}{
+  \position{Desarrollador web \quad\textbar\quad Entusiasta de GNU/Linux}%{\enskip\cdotp\enskip}Security Expert}
+}
 \address{Guadalajara, Jalisco, México\\Cel. (+52) 3311041939}
 %\mobile{(+353) 86-033-6758} 
 %%% Social
@@ -67,14 +72,13 @@
 %%% Optionals
 %\quote{``Make the change that you want to see in the world."}
 
-\usepackage[spanish, english]{babel}
 %\AtBeginDocument{\selectlanguage{english}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Content
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Make a footer for CV with three arguments(<left>, <center>, <right>)
 \makecvfooter
-  {\selectlanguage{spanish}\today}
+  {\today}
   {Eduardo Zepeda~~~·~~~CV}
   {\thepage}
 
@@ -86,6 +90,18 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
+\IfLanguageName{english}{
+\input{resume/summary-en.tex}
+\input{resume/experience-en.tex}
+%\input{resume/honors.tex}
+%\input{resume/presentation.tex}
+%\input{resume/writing.tex}
+%\input{resume/committees.tex}
+\input{resume/education-en.tex}
+\input{resume/projects-en.tex}
+\input{resume/skills-en.tex}
+%\input{resume/extracurricular.tex}   
+}{
 \input{resume/summary.tex}
 \input{resume/experience.tex}
 %\input{resume/honors.tex}
@@ -95,8 +111,8 @@
 \input{resume/education.tex}
 \input{resume/projects.tex}
 \input{resume/skills.tex}
-%\input{resume/extracurricular.tex}
-
+%\input{resume/extracurricular.tex}   
+}
 
 %-------------------------------------------------------------------------------
 \end{document}
