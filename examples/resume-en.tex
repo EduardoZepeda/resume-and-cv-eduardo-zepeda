@@ -41,19 +41,20 @@
 
 %%% Override a separator for social informations in header(default: ' | ')
 %\headersocialsep[\quad\textbar\quad]
+% \usepackage[english, spanish]{babel}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     3rd party packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Needed to divide into several files
 \usepackage{import}
 \usepackage{etaremune}
-\usepackage[english, spanish]{babel}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Personal Data
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Essentials
 \name{Eduardo}{Zepeda}
-\position{Desarrollador web \quad\textbar\quad Entusiasta de GNU/Linux}%{\enskip\cdotp\enskip}Security Expert}
+\position{Full stack developer \quad\textbar\quad GNU/Linux Enthusiast}%{\enskip\cdotp\enskip}Security Expert}
 \address{Guadalajara, Jalisco, México\\Cel. (+52) 3311041939}
 %\mobile{(+353) 86-033-6758} 
 %%% Social
@@ -83,17 +84,16 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{resume/summary.tex}
-\input{resume/experience.tex}
+\input{resume/i18n/summary-en.tex}
+\input{resume/i18n/experience-en.tex}
 %\input{resume/honors.tex}
 %\input{resume/presentation.tex}
 %\input{resume/writing.tex}
 %\input{resume/committees.tex}
-\input{resume/education.tex}
-\input{resume/projects.tex}
-\input{resume/skills.tex}
+\input{resume/i18n/education-en.tex}
+\input{resume/i18n/projects-en.tex}
+\input{resume/i18n/skills-en.tex}
 %\input{resume/extracurricular.tex}   
-
 
 %-------------------------------------------------------------------------------
 \end{document}
