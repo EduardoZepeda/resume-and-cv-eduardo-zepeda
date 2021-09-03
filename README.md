@@ -19,7 +19,9 @@ $ xelatex {your-cv}.tex
 
 This should result in the creation of ``{your-cv}.pdf``
 
-You can also clone this repository and execute make
+### Make files
+
+You can also clone this repository and execute make to create all the files
 
 ```bash
 $ git clone https://github.com/EduardoZepeda/resume-and-cv-eduardo-zepeda
@@ -27,6 +29,21 @@ $ make
 ```
 
 This command will generate pdf and png files in the examples directory.
+
+If you need to create a single file (coverletter.pdf, resume.pdf, resume-en.pdf, cv.pdf) declare the desired file after the make command
+
+```bash
+$ make coverletter.pdf
+$ make resume.pdf
+$ make resume-en.pdf
+$ make cv.pdf
+```
+
+For cleaning all the generated files run
+
+```bash
+$ make clean
+```
 
 ## Can I use this template?
 
