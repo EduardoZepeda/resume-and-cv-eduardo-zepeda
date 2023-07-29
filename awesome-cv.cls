@@ -690,12 +690,12 @@
   \vspace{-4.0mm}
   \begin{justify}
   \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
-    \setlength{\parskip}{0pt}
+    \setlength{\parskip}{2pt}
     \renewcommand{\labelitemi}{\bullet}
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{-4.0mm}
+  \vspace{-2.0mm}
 }
 
 
@@ -704,12 +704,12 @@
   \vspace{-4mm}
   \begin{justify}
   \begin{itemize}[leftmargin=0pt, itemsep=0pt, parsep=0pt, label={}]
-    \setlength{\parskip}{0pt}
+    \setlength{\parskip}{4pt}
     %\renewcommand{\labelitemi}{\bullet}
 }{
   \end{itemize}
   \end{justify}
-  \vspace{-2mm}
+  \vspace{-4mm}
 }
 
 
@@ -747,7 +747,7 @@
   \phantomsection{}
   \lettersectionstyle{#1}
   \color{gray}\vhrulefill{0.9pt}
-  \par\nobreak\addvspace{0.4ex}
+  \par\nobreak\addvspace{0.6ex}
 }
 
 % Define a title of the cover letter
